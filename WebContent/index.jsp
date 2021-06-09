@@ -25,6 +25,26 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<style>
+	.left-sidebar::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: #1f262d;
+	}
+	
+	.left-sidebar::-webkit-scrollbar
+	{
+		width: 10px;
+		background-color: #1f262d;
+	}
+	
+	.left-sidebar::-webkit-scrollbar-thumb
+	{
+		background-color: #1f262d;
+		/* border: 2px solid #555555; */
+	}
+</style>
 </head>
 
 <body>
