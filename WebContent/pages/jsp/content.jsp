@@ -6,7 +6,7 @@
 
 <c:choose>
 	<c:when test = "${action eq 'administrative'}">
-		<jsp:include page = "${pageContext.request.contextPath}/administrative.jsp"/>
+		<jsp:include page = "administrative.jsp"/>
 	</c:when>
 	<c:when test = "${action eq 'settings'}">
 		<jsp:include page = "settings.jsp"/>
