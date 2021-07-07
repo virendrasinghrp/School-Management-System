@@ -1,8 +1,5 @@
-<!-- Boilerplate. -->
-<jsp:root xmlns:jsp="http://java.sun.com/JSP/Page"
-          xmlns:c="http://java.sun.com/jsp/jstl/core"
-          version="2.0">
-<jsp:directive.page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" />
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1" pageEncoding="ISO-8859-1" %>
+
 <html dir="ltr">
 
 <head>
@@ -11,13 +8,13 @@
     <!-- Tell the browser to be responsive to screen width -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <meta name="keywords" content="wrappixel, admin dashboard, html css dashboard, web dashboard, bootstrap 5 admin, bootstrap 5, css3 dashboard, bootstrap 5 dashboard, Matrix lite admin bootstrap 5 dashboard, frontend, responsive bootstrap 5 admin template, Matrix admin lite design, Matrix admin lite dashboard bootstrap 5 dashboard template">
-    <meta name="description" content="Matrix Admin Lite Free Version is powerful and clean admin dashboard template, inpired from Bootstrap Framework">
+    <meta name="description" content="School Management System">
     <meta name="robots" content="noindex,nofollow">
-    <title>Matrix Admin Lite Free Versions Template by WrapPixel</title>
+    <title>Lorem Ipsum Academy</title>
     <!-- Favicon icon -->
-   <link rel="icon" type="image/png" sizes="16x16" href="${contextPath}/assets/images/favicon.png">
+   <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/assets/images/favicon.png">
     <!-- Custom CSS -->
-    <link href="${contextPath}/dist/css/style.min.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/dist/css/style.min.css" rel="stylesheet">
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -43,35 +40,42 @@
         <!-- ============================================================== -->
         <!-- Login box.scss -->
         <!-- ============================================================== -->
-        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark">
+        <div class="auth-wrapper d-flex no-block justify-content-center align-items-center bg-dark"  style="height:100%;">
             <div class="auth-box bg-dark border-top border-secondary">
                 <div id="loginform">
                     <div class="text-center pt-3 pb-3">
-                        <span class="db"><img src="${contextPath}/assets/images/logo.png" alt="logo" /></span>
+                        <span class="db"><img src="${pageContext.request.contextPath}/assets/images/logo-icon.png" alt="logo" style="padding-right:10px;" /> <img src="${pageContext.request.contextPath}/assets/images/loremIpsumAcademy.png" alt="homepage" class="light-logo" />
+                        </span>
                     </div>
                     <!-- Form -->
-                    <form class="form-horizontal mt-3" id="loginform" action="index.jsp">
+                    <form class="form-horizontal mt-3" id="loginform" action="<%=request.getContextPath()%>/LoginServlet" method="post">
                         <div class="row pb-4">
                             <div class="col-12">
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-success text-white h-100" id="basic-addon1"><i class="ti-user"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Username" aria-label="Username" aria-describedby="basic-addon1" required="">
+                                    <input type="text" class="form-control form-control-lg" placeholder="username" aria-label="username" name="username" aria-describedby="basic-addon1" required="">
                                 </div>
                                 <div class="input-group mb-3">
                                     <div class="input-group-prepend">
                                         <span class="input-group-text bg-warning text-white h-100" id="basic-addon2"><i class="ti-pencil"></i></span>
                                     </div>
-                                    <input type="text" class="form-control form-control-lg" placeholder="Password" aria-label="Password" aria-describedby="basic-addon1" required="">
+                                    <input type="password" class="form-control form-control-lg" placeholder="password" aria-label="password"  name="password" aria-describedby="basic-addon1" required="">
                                 </div>
+                                <div class="col-md-9">
+							        <small id="passwordHelp" class="text-danger">
+							         	${errMessage}
+							        </small>      
+							    </div>
                             </div>
                         </div>
+
                         <div class="row border-top border-secondary">
                             <div class="col-12">
                                 <div class="form-group">
                                     <div class="pt-3">
-                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock me-1"></i> Lost password?</button>
+                                        <button class="btn btn-info" id="to-recover" type="button"><i class="fa fa-lock me-1"></i> Forgot password?</button>
                                         <button class="btn btn-success float-end text-white" type="submit">Login</button>
                                     </div>
                                 </div>
@@ -124,9 +128,9 @@
     <!-- ============================================================== -->
     <!-- All Required js -->
     <!-- ============================================================== -->
-    <script src="${contextPath}/assets/libs/jquery/dist/jquery.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/libs/jquery/dist/jquery.min.js"></script>
     <!-- Bootstrap tether Core JavaScript -->
-    <script src="${contextPath}/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="${pageContext.request.contextPath}/assets/libs/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <!-- ============================================================== -->
     <!-- This page plugin js -->
     <!-- ============================================================== -->
@@ -136,6 +140,12 @@
     // ============================================================== 
     // Login and Recover Password 
     // ============================================================== 
+    	
+    $(document).ready ( function(){
+    	$("#recoverform").hide();
+        $("#loginform").fadeIn();
+    });
+    
     $('#to-recover').on("click", function() {
         $("#loginform").slideUp();
         $("#recoverform").fadeIn();
@@ -145,11 +155,9 @@
         $("#recoverform").hide();
         $("#loginform").fadeIn();
     });
+    
     </script>
 
 </body>
 
 </html>
-
-
-</jsp:root>

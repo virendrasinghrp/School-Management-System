@@ -25,6 +25,32 @@
     <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
     <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
 <![endif]-->
+
+<style>
+	/*<!-- ============================================================== -->
+    <!-- ScrollBar - style for left-sidebar scrollbar -->
+    <!-- ============================================================== -->*/
+	.left-sidebar::-webkit-scrollbar-track
+	{
+		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+		background-color: #1f262d;
+	}
+	
+	.left-sidebar::-webkit-scrollbar
+	{
+		width: 10px;
+		background-color: #1f262d;
+	}
+	
+	.left-sidebar::-webkit-scrollbar-thumb
+	{
+		background-color: #1f262d;
+		/* border: 2px solid #555555; */
+	}
+	/*<!-- ============================================================== -->
+    <!-- END ScrollBar - style for left-sidebar scrollbar -->
+    <!-- ============================================================== -->*/
+</style>
 </head>
 
 <body>
@@ -46,7 +72,7 @@
         <!-- Topbar header - style you can find in pages.scss -->
         <!-- ============================================================== -->
         <header class="topbar" data-navbarbg="skin5">
-            <nav class="navbar top-navbar navbar-expand-md navbar-dark">
+            <nav class="navbar top-navbar navbar-expand-md navbar-dark" style="position:fixed !IMPORTANT;width:100% !IMPORTANT;">
                 <div class="navbar-header" data-logobg="skin5">
                     
                     <!-- ============================================================== -->
@@ -220,7 +246,7 @@
         <!-- ============================================================== -->
         <!-- Left Sidebar - style you can find in sidebar.scss  -->
         <!-- ============================================================== -->
-        <aside class="left-sidebar" data-sidebarbg="skin5">
+        <aside class="left-sidebar" data-sidebarbg="skin5" style="position:fixed;overflow-y: auto;top: 0;bottom: 0;">
             <!-- Sidebar scroll-->
             <div class="scroll-sidebar">
                 <!-- Sidebar navigation-->
@@ -301,7 +327,6 @@
                 </nav>
                 <!-- End Sidebar navigation -->
                 
-                <jsp:include page ="content.jsp" />
             </div>
             <!-- End Sidebar scroll-->
         </aside>
@@ -312,18 +337,19 @@
         <!-- Page wrapper  -->
         <!-- ============================================================== -->
         <div class="page-wrapper">
+        
+        
+	        <!-- ============================================================== -->
+	        <!-- Page Content  -->
+	        <!-- ============================================================== -->
+        	
+        	<jsp:include page ="content.jsp" />
+        	
+        	<!-- ============================================================== -->
+	        <!-- END Page Content  -->
+	        <!-- ============================================================== -->
 
-            
-			
-			
-			
-			
-			
-			
-			
-			
-			
-			
+
 			
             <!-- ============================================================== -->
             <!-- footer -->

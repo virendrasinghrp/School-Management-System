@@ -27,6 +27,9 @@
 <![endif]-->
 
 <style>
+	/*<!-- ============================================================== -->
+    <!-- ScrollBar - style for left-sidebar scrollbar -->
+    <!-- ============================================================== -->*/
 	.left-sidebar::-webkit-scrollbar-track
 	{
 		-webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
@@ -44,6 +47,9 @@
 		background-color: #1f262d;
 		/* border: 2px solid #555555; */
 	}
+	/*<!-- ============================================================== -->
+    <!-- END ScrollBar - style for left-sidebar scrollbar -->
+    <!-- ============================================================== -->*/
 </style>
 </head>
 
