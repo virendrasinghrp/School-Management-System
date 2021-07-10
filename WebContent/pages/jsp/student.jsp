@@ -12,7 +12,7 @@
     <meta name="description"
         content="School Management System">
     <meta name="robots" content="noindex,nofollow">
-    <title>Lorem Ipsum Academy</title>
+    <title>UPES</title>
     <!-- Favicon icon -->
     <link rel="icon" type="image/png" sizes="16x16" href="${pageContext.request.contextPath}/assets/images/favicon.png">
     <!-- Custom CSS -->
@@ -78,7 +78,7 @@
                     <!-- ============================================================== -->
                     <!-- Logo -->
                     <!-- ============================================================== -->
-                    <a class="navbar-brand" href="${pageContext.request.contextPath}/pages/jspindex.jsp">
+                    <a class="navbar-brand" href="${pageContext.request.contextPath}/index.jsp">
                         <!-- Logo icon -->
                         <b class="logo-icon ps-2">
                             <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
@@ -183,7 +183,7 @@
                                                     <span class="btn btn-primary btn-circle"><i
                                                             class="ti-user"></i></span>
                                                     <div class="ms-2">
-                                                        <h5 class="mb-0">Pavan kumar</h5>
+                                                        <h5 class="mb-0"><%= session.getAttribute("Student") %> </h5>
                                                         <span class="mail-desc">Just see the my admin!</span>
                                                     </div>
                                                 </div>
@@ -253,72 +253,35 @@
                 <nav class="sidebar-nav">
                     <ul id="sidebarnav" class="pt-4">
                         <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="${pageContext.request.contextPath}/pages/jsp/index.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
+                                href="${pageContext.request.contextPath}/pages/jsp/student.jsp" aria-expanded="false"><i class="mdi mdi-view-dashboard"></i><span
                                     class="hide-menu">Dashboard</span></a></li>
                         <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-school"></i><span
                                     class="hide-menu">Academics </span></a>
                             <ul aria-expanded="false" class="collapse  first-level">
                                 <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic
+                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Subjects
                                         </span></a></li>
                                 <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard
+                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Assignments
                                         </span></a></li>
+                                        <!--${pageContext.request.contextPath}/form-basic.jsp -->
                             </ul>
                         </li>                        
-						<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="fas fa-building"></i><span
-                                    class="hide-menu">Administrative </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard
-                                        </span></a></li>
-                            </ul>
+                                    class="hide-menu">Attendance </span></a>
                         </li>                        
-						<li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-account-multiple"></i><span
-                                    class="hide-menu">Students </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard
-                                        </span></a></li>
-                            </ul>
+                                    class="hide-menu">Schedule </span></a>
                         </li>
 						
-						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="javascript:void(0)" aria-expanded="false"><i class="fas fa-users"></i><span
-                                    class="hide-menu">Users</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="javascript:void(0)" aria-expanded="false"><i class="fas fa-table"></i><span
-                                    class="hide-menu">Classes</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="javascript:void(0)" aria-expanded="false"><i class="fas fa-home"></i><span
-                                    class="hide-menu">Hostel</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="javascript:void(0)" aria-expanded="false"><i class="mdi mdi-blur-linear"></i><span
-                                    class="hide-menu">Sections</span></a></li>
-                        <li class="sidebar-item"> <a class="sidebar-link has-arrow waves-effect waves-dark"
+                        <li class="sidebar-item"> <a class="sidebar-link  waves-effect waves-dark"
                                 href="javascript:void(0)" aria-expanded="false"><i class="fas fa-book"></i><span
                                     class="hide-menu">Exams </span></a>
-                            <ul aria-expanded="false" class="collapse  first-level">
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-outline"></i><span class="hide-menu"> Form Basic
-                                        </span></a></li>
-                                <li class="sidebar-item"><a href="javascript:void(0)" class="sidebar-link"><i
-                                            class="mdi mdi-note-plus"></i><span class="hide-menu"> Form Wizard
-                                        </span></a></li>
-                            </ul>
+
                         </li>
-						<li class="sidebar-item"> <a class="sidebar-link waves-effect waves-dark sidebar-link"
-                                href="${pageContext.request.contextPath}/pages/jsp/index.jsp?page=settings" aria-expanded="false"><i class="fas fa-cog"></i><span
-                                    class="hide-menu">Settings</span></a></li>
                         
                         <!-- <li class="sidebar-item p-3">
                             <a href="https://github.com/wrappixel/matrix-admin-bt5" target="_blank" class="w-100 btn btn-cyan d-flex align-items-center text-white"><i class="mdi mdi-cloud-download font-20 me-2"></i>Download Free</a>
@@ -355,8 +318,8 @@
             <!-- footer -->
             <!-- ============================================================== -->
             <footer class="footer text-center">
-                Theme "Matrix-admin" by  <a
-                    href="https://www.wrappixel.com">WrapPixel</a>.
+                <a
+                    href="https://www.wrappixel.com"></a>.
             </footer>
             <!-- ============================================================== -->
             <!-- End footer -->
