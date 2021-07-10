@@ -83,7 +83,7 @@ public class LoginServlet extends HttpServlet {
 	            session.setAttribute("Student", userName);
 	            request.setAttribute("userName", userName);
 	 
-	            request.getRequestDispatcher("pages/jsp/index.jsp").forward(request, response);
+	            request.getRequestDispatcher("pages/jsp/student_index.jsp").forward(request, response);
 	        }
 	        else
 	        {
